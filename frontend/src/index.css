@@ -1,0 +1,107 @@
+:root {
+  --bg-base: #060b14;
+  --bg-surface: #0d1626;
+  --bg-raised: #142036;
+  --bg-card: #0f1a2e;
+  --bg-elevated: #1a2a44;
+
+  --accent-blue: #3b82f6;
+  --accent-cyan: #06b6d4;
+  --accent-purple: #8b5cf6;
+  --neon-blue: #38bdf8;
+
+  --critical: #ef4444;
+  --high: #f97316;
+  --medium: #eab308;
+  --low: #22c55e;
+
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  --text-accent: #38bdf8;
+
+  --border: #1e293b;
+  --border-hover: #334155;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 20px;
+
+  --sidebar-width: 260px;
+  --sidebar-collapsed-width: 72px;
+  --topbar-height: 64px;
+
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.25s ease;
+
+  --glow-blue: 0 0 20px rgba(56, 189, 248, 0.15);
+  --glow-critical: 0 0 20px rgba(239, 68, 68, 0.2);
+}
+
+[data-theme="light"] {
+  --bg-base: #f8fafc;
+  --bg-surface: #ffffff;
+  --bg-raised: #f1f5f9;
+  --bg-card: #ffffff;
+  --bg-elevated: #e2e8f0;
+
+  --accent-blue: #2563eb;
+  --accent-cyan: #0284c7;
+  --accent-purple: #7c3aed;
+  --neon-blue: #0284c7;
+
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #64748b;
+  --text-accent: #0284c7;
+
+  --border: #e2e8f0;
+  --border-hover: #cbd5e1;
+
+  --glow-blue: 0 0 15px rgba(2, 132, 199, 0.12);
+  --glow-critical: 0 0 15px rgba(239, 68, 68, 0.15);
+}
+
+[data-theme="blue"] {
+  --bg-base: #03071e;
+  --bg-surface: #08103a;
+  --bg-raised: #0e1a54;
+  --bg-card: #0a1445;
+  --bg-elevated: #15246d;
+
+  --accent-blue: #4d9fff;
+  --accent-cyan: #00d4ff;
+  --accent-purple: #a855f7;
+  --neon-blue: #4d9fff;
+
+  --border: #162b75;
+  --border-hover: #213ea6;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: var(--bg-base);
+  color: var(--text-primary);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+code, pre, .mono {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.spin-icon {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
