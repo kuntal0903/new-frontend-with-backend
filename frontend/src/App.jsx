@@ -1,5 +1,6 @@
 import { useState, useCallback, useEffect } from 'react';
 import { getSavedTheme }  from './hooks/useTheme';
+import './App.css';
 
 import Sidebar         from './components/Sidebar';
 import Topbar          from './components/Topbar';

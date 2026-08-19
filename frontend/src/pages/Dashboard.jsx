@@ -10,10 +10,26 @@ import ThreatModal from '../components/ThreatModal';
 import { Shield, ShieldAlert, Database, Activity, Filter, Download } from 'lucide-react';
 
 const KPI_CARDS = [
-  { id: 'total-assets', title: 'Total Managed Assets', value: '1,428', change: '+12% this week', trend: 'up', icon: Database, color: 'blue' },
-  { id: 'critical-risks', title: 'Critical Risk Endpoints', value: '14', change: '-3 resolved today', trend: 'down', icon: ShieldAlert, color: 'red' },
-  { id: 'health-score', title: 'Security Health Score', value: '88 / 100', change: '+4 pts increase', trend: 'up', icon: Shield, color: 'green' },
-  { id: 'active-vulns', title: 'Active Vulnerabilities', value: '342', change: '14 critical open', trend: 'up', icon: Activity, color: 'purple' },
+  {
+    id: 'total-assets', title: 'Total Assets', value: '1,284',
+    change: '+8.4% this week', trend: 'up', icon: Database, color: 'blue',
+    progress: 72, meta: { left: '928 online', right: '356 offline' }
+  },
+  {
+    id: 'critical-risks', title: 'Critical / High Risks', value: '147',
+    change: '+14 this week', trend: 'up', icon: ShieldAlert, color: 'red',
+    progress: 58, meta: { left: '42 Critical', right: '105 High' }
+  },
+  {
+    id: 'health-score', title: 'Health Score', value: '71%',
+    change: '3pts drop', trend: 'down', icon: Shield, color: 'green',
+    progress: 71, meta: { left: 'Target: 90%', right: '↓ Degrading' }
+  },
+  {
+    id: 'active-vulns', title: 'Total Vulnerabilities', value: '2,831',
+    change: '+121 detected', trend: 'up', icon: Activity, color: 'purple',
+    progress: 65, meta: { left: '1,842 unpatched', right: '7d avg fix' }
+  },
 ];
 
 export default function Dashboard({ onExport, onVulnClick }) {
@@ -30,6 +46,10 @@ export default function Dashboard({ onExport, onVulnClick }) {
           <p className="page-header__subtitle">
             Real-time security telemetry, asset exposure, and active threat intelligence feed.
           </p>
+          <div className="page-header__live-badge">
+            <span className="page-header__live-dot" />
+            LIVE &nbsp;Monitoring 1,284 assets &middot; Last scan: 6 minutes ago
+          </div>
         </div>
       </div>
 
